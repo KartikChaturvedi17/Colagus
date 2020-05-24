@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Colagus_/login</title>
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:400,600,700" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+        
+    </head>
+    <body>
+
+        <div id="login_div" class="main-div">
+            <img src="logojpg.jpg" alt="">
+            <h3>   Web login</h3>
+            <input type="email" placeholder="Email..." id="email_field" />
+            <input type="password" placeholder="Password..." id="password_field" />
+        
+            <button onclick="login()">Login to Account</button><br>
+            <button onclick="create_account()">Create a new Account</button>
+        </div>
+
+        <div id="user_div" class="loggedin-div">
+            <h3>Welcome User</h3>
+            <p id="user_para">You're currently logged in.</p>
+            <button onclick="logout()">Logout</button><br>
+            <button id="verify_btn" onclick="send_verification()">Send Verification</button><br>
+            <button onclick="user_presence()">User Presence</button>
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/7.14.5/firebase.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyA0fHOulrLAAI3ZKunpfqHgAgo91GgyYgU",
+              authDomain: "web-app01.firebaseapp.com",
+              databaseURL: "https://web-app01.firebaseio.com",
+              projectId: "web-app01",
+              storageBucket: "web-app01.appspot.com",
+              messagingSenderId: "583052208956",
+              appId: "1:583052208956:web:5565d35051cb5e8e238c39",
+              measurementId: "G-TNK1HSTBV1"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+          </script>
+          <script src="index.js"></script>
+        
+
+    </body>
+</html>
